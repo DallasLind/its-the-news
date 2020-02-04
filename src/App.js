@@ -47,6 +47,8 @@ class App extends Component {
           <ul>
             {articles.map(article => (
               <li>
+                <img className="Pic" src={`${article.urlToImage}`} />
+                <h6>{article.publishedAt}</h6>
                 <a href={article.url} target="_blank" rel="noopener noreferrer">
                   {article.title}
                 </a>
