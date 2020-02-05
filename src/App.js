@@ -32,6 +32,26 @@ class App extends Component {
       );
   }
 
+  formatDate(date) {
+    let time = new Date(date);
+    let year = time.getFullYear();
+    let day = time.getDate();
+    let hour = time.getHours();
+    let minute = time.getMinutes();
+    let month = time.getMonth() + 1;
+    let composedTime =
+      day +
+      "/" +
+      month +
+      "/" +
+      year +
+      " | " +
+      hour +
+      ":" +
+      (minute < 10 ? "0" + minute : minute);
+    return composedTime;
+  }
+
   render() {
     const { error, isLoaded, articles } = this.state;
     if (error) {
@@ -48,7 +68,7 @@ class App extends Component {
             {articles.map(article => (
               <li>
                 <img className="Pic" src={`${article.urlToImage}`} />
-                <h6>{article.publishedAt}</h6>
+                <h6>{this.formatDate(article.publishedAt)}</h6>
                 <a href={article.url} target="_blank" rel="noopener noreferrer">
                   {article.title}
                 </a>
