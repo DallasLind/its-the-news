@@ -5,18 +5,19 @@
 .App-header {
   background-color: black;
   font-family: "Times New Roman", Times, serif;
+  padding-bottom: 0.5em;
 }
 
 ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  color: white;
+  background-color: rgb(184, 242, 252);
 }
 
 li {
-  display: grid;
-  border: 1em solid;
+  display: inline-grid;
+  border: 1.5em solid rgb(184, 242, 252);
   line-height: 1.25em;
 }
 
