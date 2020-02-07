@@ -82,7 +82,7 @@ class App extends Component {
               ))}
             </ul>
           </div>
-          <Footer></Footer>
+          <Footer />
         </div>
       );
     }

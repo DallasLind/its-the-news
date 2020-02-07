@@ -4,8 +4,8 @@ import "./Footer.css";
 class Footer extends Component {
   render() {
     return (
-      <div className="footer">
-        <p>Powered by the News API</p>
+      <div className="Footer">
+        <p>Powered by the News API || Made By Dallas Lind</p>
       </div>
     );
   }
